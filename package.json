@@ -1,0 +1,57 @@
+{
+	"name": "java-refactoring",
+	"displayName": "Java legacy code refactoring",
+	"version": "0.0.2",
+	"publisher": "jan-dolejsi",
+	"author": "Jan Dolejsi",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jan-dolejsi/vscode-java-refactoring"
+	},
+	"bugs": {
+		"url": "https://github.com/jan-dolejsi/vscode-java-refactoring/issues"
+	},
+	"engines": {
+		"vscode": "^1.73.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:java"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"lint": "eslint src --ext ts",
+		"vscode:prepublish": "npm run compile",
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"package": "vsce package",
+		"pretest": "npm run compile",
+		"test:unit": "mocha -- out/test/**/*Test.js",
+		"test:integration": "node ./out/test/runVsTests.js",
+		"test": "npm run test:unit && npm run test:integration",
+		"clean": "rmdir out /s"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.3.4",
+		"@types/chai-string": "^1.4.2",
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^10.0.0",
+		"@types/node": "^16.11.7",
+		"@types/tmp": "^0.2.3",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^5.44.0",
+		"@typescript-eslint/parser": "^5.44.0",
+		"@vscode/test-electron": "^2.2.0",
+		"chai": "^4.3.7",
+		"chai-string": "^1.5.0",
+		"eslint": "^8.28.0",
+		"mocha": "^10.1.0",
+		"nyc": "^15.1.0",
+		"tmp-promise": "^3.0.3",
+		"typescript": "^4.8.4",
+		"vscode-uri": "^3.0.6"
+	}
+}

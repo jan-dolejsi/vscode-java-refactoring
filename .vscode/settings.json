@@ -1,0 +1,22 @@
+{
+	"editor.insertSpaces": false,
+	"files.exclude": {
+		"out": false // set this to true to hide the "out" folder with the compiled JS files
+	},
+	"search.exclude": {
+		"out": true // set this to false to include "out" folder in search results
+	},
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"typescript.tsc.autoDetect": "off",
+    "[typescript]": {
+        "powerHeader.autoInsert.enable": true,
+		"powerHeader.commentMode": "raw",
+        "powerHeader.template": "/*\\n * Copyright (c) Jan Dolejsi $CURRENT_YEAR. All rights reserved.\\n * Licensed under the MIT License. See License.txt in the project root for license information.\\n */\\n'use strict';\\n\\nimport { } from 'vscode';"
+    },
+	"mocha.files.glob": "out/test/*Test.js",
+	"eslint.validate": [
+		"typescript"
+	],
+	"task.allowAutomaticTasks": "on",
+	"WhiteSource Advise.Diff.BaseBranch": "main",
+}
