@@ -1,10 +1,10 @@
 # Java Legacy Code Refactoring extension for VS Code
 
-[![Downloads](https://vsmarketplacebadges.dev/downloads/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
+<!-- [![Downloads](https://vsmarketplacebadges.dev/downloads/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
 [![Installs](https://vsmarketplacebadges.dev/installs/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
-<!-- [![Ratings](https://vsmarketplacebadges.dev/rating/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring&ssr=false#review-details) -->
+[![Ratings](https://vsmarketplacebadges.dev/rating/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring&ssr=false#review-details)
+[![Visual Studio Marketplace](https://vsmarketplacebadges.dev/version/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring) -->
 [![CI/CD](https://img.shields.io/github/workflow/status/jan-dolejsi/vscode-java-refactoring/Build/master.svg?logo=github)](https://github.com/jan-dolejsi/vscode-java-refactoring/actions?query=workflow%3ABuild)
-[![Visual Studio Marketplace](https://vsmarketplacebadges.dev/version/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
 
 ## `System.out|err` -> `logger.info|debug|trace|error`
 
