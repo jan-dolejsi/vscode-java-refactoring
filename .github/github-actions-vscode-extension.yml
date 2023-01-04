@@ -3,10 +3,10 @@ name: Build
 on: 
   push: 
     branches:
-      - master
+      - main
   pull_request: 
     branches: 
-      - master
+      - main
 jobs:
   build:
     
@@ -39,13 +39,13 @@ jobs:
       - name: Package extension
         if: success()
         run: | 
-          npm install -g vsce
+          npm install --location=global vsce
           vsce package
 
   publish:
     needs: build
     runs-on: ubuntu-latest
-    if: success() && github.ref == 'refs/heads/master'
+    if: success() && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
