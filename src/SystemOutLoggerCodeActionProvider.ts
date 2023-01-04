@@ -17,7 +17,8 @@ export class SystemOutLoggerCodeActionProvider implements vscode.CodeActionProvi
 	];
 
 	public provideCodeActions(document: vscode.TextDocument, range: vscode.Range): vscode.CodeAction[] | undefined {
-		const lombokActive = !!document.getText(new vscode.Range(new vscode.Position(0, 0), range.end)).match(/@Slf4j\b/);
+		const allPriorText = document.getText(new vscode.Range(new vscode.Position(0, 0), range.end));
+		const lombokActive = !!allPriorText.match(/@Slf4j\b/);
 		const systemOutMatch = this.getSystemOutArguments(document, range);
 		if (!systemOutMatch) {
 			return;

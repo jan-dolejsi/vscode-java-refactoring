@@ -17,7 +17,7 @@
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "npm: watch"
+			"preLaunchTask": "${defaultBuildTask}",
 		},
 		{
 			"name": "Integration Tests",
@@ -32,7 +32,7 @@
 				"--disable-extensions"
 			],
 			"outFiles": ["${workspaceFolder}/out/test/**/*.js"],
-			"preLaunchTask": "npm: compile"
+			"preLaunchTask": "${defaultBuildTask}",
 		},
 	]
 }
