@@ -39,7 +39,7 @@ jobs:
       - name: Package extension
         if: success()
         run: | 
-          npm install -g vsce
+          npm install --location=global vsce
           vsce package
 
   publish:
