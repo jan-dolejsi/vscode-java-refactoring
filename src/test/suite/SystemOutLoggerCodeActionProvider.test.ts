@@ -45,7 +45,7 @@ suite('SystemOutLoggerCodeActionProvider Test Suite', () => {
 	test('Refactors out.print(int) with lombok', async () => {
 		const initialText = `@Slf4j\tSystem.out.print(123);`;
 		const expectedText = `@Slf4j\tlog.debug("{}", 123);`;
-		await testRefactoring(initialText, expectedText, 3);
+		await testRefactoring(initialText, expectedText, 3, '@Slf4j\tS'.length);
 	});
 
 	test('Refactors out.print(var1)', async () => {
@@ -110,13 +110,13 @@ suite('SystemOutLoggerCodeActionProvider Test Suite', () => {
 });
 
 
-async function testRefactoring(initialText: string, expectedText: string, expectedCodeActions: number): Promise<void> {
+async function testRefactoring(initialText: string, expectedText: string, expectedCodeActions: number, cursorPosition=1): Promise<void> {
     // we do not want the extension to actually load (it takes too much time), so use a fake language
     const doc = await vscode.workspace.openTextDocument({ language: 'java-do-not-load-extensions', content: initialText });
     const editor = await vscode.window.showTextDocument(doc);
     
     // move the cursor into the text
-    await vscode.commands.executeCommand("cursorMove", { to: 'right' });
+    await vscode.commands.executeCommand("cursorMove", { to: 'right', by: 'character', value: cursorPosition });
     const startSelectionBefore = editor.selection.start;
     
     // WHEN

@@ -6,14 +6,19 @@
 		{
 			"type": "npm",
 			"script": "compile",
-			"group": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"presentation": {
 				"panel": "shared",
 				"reveal": "always"
 			},
 			"problemMatcher": [
 				"$tsc"
-			]
+			],
+			"label": "npm: compile",
+			"detail": "tsc -p ./"
 		},
 		{
 			"type": "npm",
@@ -24,10 +29,9 @@
 				"panel": "dedicated",
 				"reveal": "never"
 			},
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
+			"group": "build",
+			"label": "npm: watch",
+			"detail": "tsc -w -p ./"
 		}
 	]
 }
