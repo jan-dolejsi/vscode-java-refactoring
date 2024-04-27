@@ -32,7 +32,7 @@ jobs:
 
       - name: Run extension integration tests in head-less VS Code
         if: success()
-        uses: GabrielBB/xvfb-action@v1.0
+        uses: coactions/setup-xvfb@v1
         with:
           run: npm test
 
@@ -58,7 +58,7 @@ jobs:
 
       - name: Publish extension to marketplace
         run: | 
-          npm install -g vsce
+          npm install -g @vscode/vsce
           vsce publish -p $VSCE_TOKEN
         env: 
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
