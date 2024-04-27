@@ -1,4 +1,4 @@
-# Java Legacy Code Refactoring extension for VS Code
+# Legacy Java Code Refactoring extension for VS Code
 
 <!-- [![Downloads](https://vsmarketplacebadges.dev/downloads/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
 [![Installs](https://vsmarketplacebadges.dev/installs/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
