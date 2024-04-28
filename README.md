@@ -4,7 +4,7 @@
 [![Installs](https://vsmarketplacebadges.dev/installs/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring)
 [![Ratings](https://vsmarketplacebadges.dev/rating/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring&ssr=false#review-details)
 [![Visual Studio Marketplace](https://vsmarketplacebadges.dev/version/jan-dolejsi.java-refactoring.svg)](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.java-refactoring) -->
-[![CI/CD](https://img.shields.io/github/workflow/status/jan-dolejsi/vscode-java-refactoring/Build/master.svg?logo=github)](https://github.com/jan-dolejsi/vscode-java-refactoring/actions?query=workflow%3ABuild)
+[![Build](https://github.com/jan-dolejsi/vscode-java-refactoring/actions/workflows/main.yml/badge.svg)](https://github.com/jan-dolejsi/vscode-java-refactoring/actions/workflows/main.yml)
 
 ## `System.out|err` -> `logger.info|debug|trace|error`
 
